@@ -29,9 +29,9 @@ class TodoForm extends Component {
           onChange={this.changeHandler}
         />
         <button type="submit">Add New Todo</button>
-        <div className="clear" onClick={this.props.deleteItem}>
+        {/* <button type="submit" onClick={this.props.deleteItem}>
           Delete Cleared Todos
-        </div>
+        </button> */}
       </form>
     );
   }
