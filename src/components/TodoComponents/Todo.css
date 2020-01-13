@@ -1,0 +1,12 @@
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    text-align: left;
+  } */
+
+  .todo.taskCompleted {
+    text-decoration: line-through;
+  }
