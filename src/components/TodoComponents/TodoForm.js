@@ -35,4 +35,6 @@ class TodoForm extends Component {
       </form>
     );
   }
-}
+};
+
+export default TodoForm;
