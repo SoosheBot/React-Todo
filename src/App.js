@@ -9,13 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      todoList: [
-        {
-          name: "",
-          taskCompleted: false,
-          id: Date.now()
-        }
-      ]
+      todoList: []
     };
   }
   // design `App` to be the parent component of your application.
@@ -46,12 +40,16 @@ class App extends Component {
     this.setState({ todoList: [...this.state.todoList, newTodo] });
   };
 
+  clearCompleted = () => {
+    this.setState({todoList: this.state.todoList.filter(todo => !todo.taskCompleted)})
+  }
+
   render() {
     return (
       <div className="App">
         <div className="header">
           <h2>Welcome to your Todo App!</h2>
-          <TodoForm addTodo={this.addTodo} />
+          <TodoForm addTodo={this.addTodo} clearCompleted={this.clearCompleted} />
         </div>
         <TodoList todoList={this.state.todoList} toggleItem={this.toggleItem} />
       </div>
