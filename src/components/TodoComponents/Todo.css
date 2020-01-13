@@ -1,5 +1,6 @@
 body {
   background-color: #2d2d37;
+  width:100%;
 }
 
 h1,
@@ -29,8 +30,6 @@ span {
   }
   h1 {
     text-align: left;
-    font-size:100px;
-    
   }
 
   .todo-list {
@@ -39,18 +38,17 @@ span {
     justify-content: space-between;
     width: 100%;
     margin: 0 auto;
+    font-size:20px;
   }
   .todo {
-    background-color: green;
     width: 45%;
-    text-align: left;
+    text-align: center;
     margin: 4px 0;
     padding: 20px 8px;
     cursor: pointer;
   }
   
   .todo.taskCompleted {
-    background-color: lightgreen;
     text-decoration: line-through;
   }
 
@@ -79,6 +77,6 @@ span {
     font-size: 16px;
     padding: 6px 14px;
     margin-right: 10px;
+
   }
 
-  

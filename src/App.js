@@ -19,7 +19,7 @@ class App extends Component {
     this.setState({
       todoList: this.state.todoList.map(todo => {
         if (todoId === todo.id) {
-          // console.log(`${todoId} equals ${todo.id}`)
+          console.log(`${todoId} equals ${todo.id} so this todo will be crossed out`)
           return {
             ...todo,
             taskCompleted: !todo.taskCompleted
@@ -37,11 +37,14 @@ class App extends Component {
       id: Date.now()
     };
 
+
     this.setState({ todoList: [...this.state.todoList, newTodo] });
+    console.log('todo item added')
   };
 
   clearCompleted = () => {
     this.setState({todoList: this.state.todoList.filter(todo => !todo.taskCompleted)})
+    console.log('todo item cleared');
   }
 
   render() {
