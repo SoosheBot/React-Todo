@@ -3,6 +3,7 @@ import './components/TodoComponents/Todo.css';
 
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
+import SearchFilter from './components/TodoComponents/SearchFilter';
 
 class App extends Component {
   // you will need a place to store your state in this component.
@@ -45,6 +46,10 @@ class App extends Component {
   clearCompleted = () => {
     this.setState({todoList: this.state.todoList.filter(todo => !todo.taskCompleted)})
     console.log('todo item cleared');
+  }
+
+  submitSearch = () => {
+    
   }
 
   render() {
