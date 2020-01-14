@@ -5,7 +5,7 @@ class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchText:''
+            searchText:[]
         }
     }
 
@@ -16,7 +16,7 @@ class SearchForm extends Component {
       submitHandler = e => {
         e.preventDefault();
         this.props.submitSearch(this.state.searchText);
-        // this.setState({ searchText: "" });
+        this.setState({ searchText: "" });
       };
 
 
