@@ -48,9 +48,9 @@ class App extends Component {
     console.log('todo item cleared');
   }
 
-  submitSearch = (e) => {
+  submitSearch = searchText => {
     this.setState({todoList: this.state.todoList.filter(search => {
-
+      return search.searchText.name.toLowerCase().includes(searchText.toLowerCase())
     })})
   }
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Search from './Search';
 
-class SearchFilter extends Component {
+
+class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,14 +16,13 @@ class SearchFilter extends Component {
       submitHandler = e => {
         e.preventDefault();
         this.props.submitSearch(this.state.searchText);
-        console.log("this.state.searchText is: ", this.state.searchText);
-        this.setState({ searchText: "" });
+        // this.setState({ searchText: "" });
       };
 
 
   render() {
     return (
-        <form onSubmit={this.submitHandler}>
+        <form onSubmit={this.submitHandler} className='search-form'>
         <input
           type="text"
           name="searchText"
@@ -41,4 +40,4 @@ class SearchFilter extends Component {
   }
 }
 
-export default SearchFilter;
+export default SearchForm;
