@@ -3,7 +3,7 @@ import './components/TodoComponents/Todo.css';
 
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
-// import SearchForm from './components/TodoComponents/SearchForm';
+import SearchForm from './components/TodoComponents/SearchForm';
 
 class App extends Component {
   // you will need a place to store your state in this component.
@@ -20,7 +20,7 @@ class App extends Component {
     this.setState({
       todoList: this.state.todoList.map(todo => {
         if (todoId === todo.id) {
-          console.log(`${todoId} equals ${todo.id} so this todo will be crossed out`)
+          // console.log(`${todoId} equals ${todo.id} so this todo will be crossed out`)
           return {
             ...todo,
             taskCompleted: !todo.taskCompleted
@@ -47,17 +47,11 @@ class App extends Component {
     console.log('todo item cleared');
   }
 
-  // submitSearch = searchText => {
-  //   const newList = {
-  //     name: searchText,
-  //     taskCompleted: false,
-  //     id:Date.now()
-  //   };
-
-  //   this.setState({newList: this.state.todoList.filter(search => {
-  //     return search.name.toLowerCase().includes(searchText.toLowerCase())
-  //   })})
-  // }
+  submitSearch = searchText => {
+    this.setState({todoList: this.state.todoList.filter(search => {
+      return search.name.toLowerCase().includes(searchText.toLowerCase())
+    })})
+  }
 
   render() {
     return (
@@ -67,8 +61,8 @@ class App extends Component {
           <TodoForm addTodo={this.addTodo} clearCompleted={this.clearCompleted} />
           
         </div>
-        {/* <SearchForm submitSearch={this.submitSearch} /> */}
-        <TodoList todoList={this.state.todoList} toggleItem={this.toggleItem} submitSearch={this.submitSearch} />
+        <SearchForm submitSearch={this.submitSearch} />
+        <TodoList todoList={this.state.todoList} toggleItem={this.toggleItem} />
 
       </div>
     );

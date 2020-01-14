@@ -5,15 +5,15 @@ class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchText:[]
+            searchText: []
         }
     }
 
-    changeHandler = e => {
+    handleChange = e => {
         this.setState({ searchText: e.target.value });
       };
 
-      submitHandler = e => {
+      submitChange = e => {
         e.preventDefault();
         this.props.submitSearch(this.state.searchText);
         this.setState({ searchText: "" });
@@ -22,12 +22,12 @@ class SearchForm extends Component {
 
   render() {
     return (
-        <form onSubmit={this.submitHandler} className='search-form'>
+        <form onSubmit={this.submitChange} className='search-form'>
         <input
           type="text"
           name="searchText"
           value={this.state.searchText}
-          onChange={this.changeHandler}
+          onChange={this.handleChange}
         />
         <button
           type="submit"

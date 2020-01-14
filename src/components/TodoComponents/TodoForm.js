@@ -15,7 +15,7 @@ class TodoForm extends Component {
   submitHandler = e => {
     e.preventDefault();
     this.props.addTodo(this.state.todoText);
-    console.log("this.state.todoText is: ", this.state.todoText);
+    // console.log("this.state.todoText is: ", this.state.todoText);
     this.setState({ todoText: "" });
   };
 
