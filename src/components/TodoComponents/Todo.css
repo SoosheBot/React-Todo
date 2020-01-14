@@ -1,0 +1,82 @@
+body {
+  background-color: #2d2d37;
+  width:100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span {
+  font-family: "Helvetica", sans-serif;
+  color:white;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0 36px;
+  margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+  }
+  h1 {
+    text-align: left;
+  }
+
+  .todo-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    font-size:20px;
+  }
+  .todo {
+    width: 45%;
+    text-align: center;
+    margin: 4px 0;
+    padding: 20px 8px;
+    cursor: pointer;
+  }
+  
+  .todo.taskCompleted {
+    text-decoration: line-through;
+  }
+
+  form {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  form > input {
+    background-color: #2d2d37;
+    border: 0;
+    padding: 6px 0;
+    font-size: 1rem;
+    width: 240px;
+    outline: 0;
+    color: white;
+    border-bottom: 2px solid green;
+    margin-right: 20px;
+  }
+  
+
+  button {
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+    font-size: 16px;
+    padding: 6px 14px;
+    margin-right: 10px;
+
+  }
+
